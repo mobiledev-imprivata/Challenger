@@ -14,6 +14,7 @@
 		D6CAA89A20ADE9D6001FFBCD /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D6CAA89820ADE9D6001FFBCD /* LaunchScreen.storyboard */; };
 		D6CAA8A220ADEB5E001FFBCD /* Logger.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6CAA8A120ADEB5E001FFBCD /* Logger.swift */; };
 		D6CAA8A420ADEBCD001FFBCD /* ChunkUtils.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6CAA8A320ADEBCD001FFBCD /* ChunkUtils.swift */; };
+		D6CAA8A620ADEF21001FFBCD /* BluetoothManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6CAA8A520ADEF21001FFBCD /* BluetoothManager.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +27,7 @@
 		D6CAA89B20ADE9D6001FFBCD /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		D6CAA8A120ADEB5E001FFBCD /* Logger.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Logger.swift; sourceTree = "<group>"; };
 		D6CAA8A320ADEBCD001FFBCD /* ChunkUtils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChunkUtils.swift; sourceTree = "<group>"; };
+		D6CAA8A520ADEF21001FFBCD /* BluetoothManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BluetoothManager.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -60,6 +62,7 @@
 			children = (
 				D6CAA8A120ADEB5E001FFBCD /* Logger.swift */,
 				D6CAA8A320ADEBCD001FFBCD /* ChunkUtils.swift */,
+				D6CAA8A520ADEF21001FFBCD /* BluetoothManager.swift */,
 				D6CAA88F20ADE9D5001FFBCD /* AppDelegate.swift */,
 				D6CAA89120ADE9D5001FFBCD /* ViewController.swift */,
 				D6CAA89320ADE9D5001FFBCD /* Main.storyboard */,
@@ -145,6 +148,7 @@
 				D6CAA8A420ADEBCD001FFBCD /* ChunkUtils.swift in Sources */,
 				D6CAA8A220ADEB5E001FFBCD /* Logger.swift in Sources */,
 				D6CAA89020ADE9D5001FFBCD /* AppDelegate.swift in Sources */,
+				D6CAA8A620ADEF21001FFBCD /* BluetoothManager.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
