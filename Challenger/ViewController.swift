@@ -21,7 +21,7 @@ class ViewController: UIViewController {
     }
 
     @IBAction func sendChallenge(_ sender: Any) {
-        print("challenge")
+        log("challenge")
     }
     
 }
