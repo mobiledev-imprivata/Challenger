@@ -11,10 +11,10 @@ import CoreBluetooth
 
 final class BluetoothManager: NSObject {
     
-    private let serviceUUID                 = CBUUID(string: "3025E7A9-CC24-4B7C-B806-0F674D07E46C")
-    private let challengeCharacteristicUUID = CBUUID(string: "9476292B-5E5A-4CD4-BD3E-9B1E7B4DB12E")
-    private let responseCharacteristicUUID  = CBUUID(string: "9476292B-5E5A-4CD4-BD3E-9B1E7B4DB12E")
-
+    private let serviceUUID                 = CBUUID(string: "4666875B-86FC-4F05-8EBB-22FD441020B9")
+    private let challengeCharacteristicUUID = CBUUID(string: "7198C97A-914A-432D-B828-0EEA0E2B65FC")
+    private let responseCharacteristicUUID  = CBUUID(string: "0B9DB0E5-C5B3-4043-8294-44D8112ADC54")
+    
     private let timeoutInSecs = 5.0
     
     private var centralManager: CBCentralManager!
@@ -86,7 +86,8 @@ final class BluetoothManager: NSObject {
             log("problem generating challenge")
             return
         }
-        log("challenge: \(challenge)")
+        let challengeString = challenge.reduce("") { $0 + String(format: " %02x", $1) }
+        log("challenge:\(challengeString)")
         peripheral.writeValue(challenge, for: challengeCharacteristic, type: .withoutResponse)
     }
     
@@ -157,6 +158,7 @@ extension BluetoothManager: CBPeripheralDelegate {
                 challengeCharacteristic = characteristic
             } else if characteristic.uuid == responseCharacteristicUUID {
                 responseCharacteristic = characteristic
+                peripheral.setNotifyValue(true, for: responseCharacteristic)
             }
         }
         guard challengeCharacteristic != nil else {
