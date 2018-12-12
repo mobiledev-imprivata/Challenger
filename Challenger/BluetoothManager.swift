@@ -92,8 +92,8 @@ final class BluetoothManager: NSObject {
     }
     
     private func processResponse(responseBytes: [UInt8]) {
-        log("processResponse")
-        print(responseBytes)
+        log("processResponse, \(responseBytes.count) bytes")
+        print(responseBytes.reduce("") { $0 + String(format: "%02x ", $1) })
     }
     
 }
